@@ -1,8 +1,8 @@
 # LinkedIn Company Directory Scraper
 
-![GitHub last commit](https://img.shields.io/github/last-commit/yourusername/linkedin-company-directory-scraper)
-![GitHub license](https://img.shields.io/github/license/yourusername/linkedin-company-directory-scraper)
-![GitHub stars](https://img.shields.io/github/stars/yourusername/linkedin-company-directory-scraper?style=social)
+![GitHub last commit](https://img.shields.io/github/last-commit/KarthikDani/linkedin-company-directory-scraper)
+![GitHub license](https://img.shields.io/github/license/KarthikDani/linkedin-company-directory-scraper)
+![GitHub stars](https://img.shields.io/github/stars/KarthikDani/linkedin-company-directory-scraper?style=social)
 
 ## Table of Contents
 
@@ -80,7 +80,7 @@ The extracted data will be structured as follows:
 
 ## 8. LinkedIn Company Profile Scraper
 
-For more comprehensive LinkedIn scraping, check out our [LinkedIn Company Profile Scraper](https://github.com/yourusername/linkedin-company-profile-scraper) repository. This project allows you to extract detailed information from individual LinkedIn company profiles.
+For more comprehensive LinkedIn scraping, check out our [LinkedIn Company Profile Scraper](https://github.com/KarthikDani/linkedin-company-profile-scraper) repository. This project allows you to extract detailed information from individual LinkedIn company profiles.
 
 ## 9. Contributing
 
