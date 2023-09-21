@@ -1,7 +1,7 @@
 # LinkedIn Company Directory Scraper
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/[KarthikDani/LinkedIn-Company-Directory-Scraper](https://github.com/KarthikDani/LinkedIn-Company-Directory-Scraper/))
-![GitHub stars](https://img.shields.io/github/stars/https://github.com/KarthikDani/LinkedIn-Company-Directory-Scraper/?style=social)
+![GitHub stars](https://img.shields.io/github/stars/KarthikDani/LinkedIn-Company-Directory-Scraper/?style=social)
 
 ## Table of Contents
 
