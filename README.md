@@ -1,16 +1,15 @@
 # LinkedIn Company Data Scraping System
 
-The LinkedIn Company Data Scraping System combines two powerful tools for extracting valuable data from LinkedIn: the LinkedIn `Company Directory Scraper` and the LinkedIn `Company Profile Scraper`. 
+The LinkedIn Company Data Scraping System combines two powerful spiders for extracting valuable data from LinkedIn: `Linkedin Directory Scraper` and `Company Profile Scraper` python files. 
 This system provides a comprehensive solution for gathering company information for various purposes, including research, analytics, building solutions and more.
 
 ## Table of Contents
 
 1. [Features](#1-features)
 2. [Installation](#2-installation)
-3. [Getting Started](#3-getting-started)
-4. [Usage](#4-usage)
-5. [Data Output](#5-data-output)
-6. [Contributing](#7-contributing)
+3. [Usage](#4-usage)
+4. [Data Output](#5-data-output)
+5. [Contributing](#7-contributing)
 
 ## 1. Features
 
@@ -29,45 +28,41 @@ To set up the LinkedIn Company Data Scraping System, follow these steps:
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com//linkedin-company-data-scraping-system.git
-cd linkedin-company-data-scraping-system
+git clone https://github.com/KarthikDani/LinkedIn-Company-Data-Scraping-System.git
+# 2. Go into each of the folder
+cd LinkedIn-Company-Data-Scraping-System
 
-## Go into each of the two folders and carry out the below mentioned steps
-# 2. Create a virtual environment (recommended)
+# 3. (Optional) To create a virtual environment [exists in this case already]
 python3 -m venv venv
+
+# 4. Activate the virutal environment
 source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
 
-# 3. Install required packages
+# 5. Install required packages
 pip install scrapy requests
 ```
 
-## 3. Getting Started
-
-To start scraping LinkedIn company profiles and directory data, customize the project according to your requirements:
-
-- Configure user agents and data sources in the respective settings files.
-
-## 4. Usage
+## 3. Usage
 
 ### LinkedIn Company Directory Scraper
 
 Run the LinkedIn Company Directory Scraper using the following command:
 
 ```bash
-scrapy crawl directoryspider -O directorydata.json
+scrapy crawl linkedin_directory_scraper -O directory_data.json
 ```
 
-The scraped company directory data will be stored in the `directorydata.json` file in a structured JSON format or use `directorydata.csv`, according to your convinience.
+The scraped company directory data will be stored in the `directory_data.json` file in a structured JSON format or use `directory_data.csv`, according to your convinience.
 
 ### LinkedIn Company Profile Scraper
 
 Run the LinkedIn Company Profile Scraper using the following command:
 
 ```bash
-scrapy crawl company_profile -O companyprofiledata.json
+scrapy crawl company_profile_scraper -O company_profile_data.json
 ```
 
-The scraped company profile data will be stored in the `companyprofiledata.json` file in a structured JSON format.
+The scraped company profile data will be stored in the `company_profile_data.json` file in a structured JSON format.
 
 ## 5. Data Output
 
@@ -84,7 +79,7 @@ The extracted directory data will be structured as follows:
   }
 ]
 ```
-We are currently capable of extracting approximately 2 Lakh company names along with their linkedin page URLs.
+The Project is capable of extracting ~ 2 Lakh company names along with their linkedin page URLs from the Linkedin Company Directory.
 
 ### LinkedIn Company Profile Scraper Output
 
@@ -93,23 +88,24 @@ The extracted company profile data will include details such as company name, Li
 Below is an example of the output format of the company profile scraper with 16 useful and distinct parameters.
 
 ```json
-]    
+[
     {
-        "company_name": "Google",
-        "linkedin_followers_count": 31591786,
-        "company_logo_url": "https://media.licdn.com/dms/image/C4D0BAQHiNSL4Or29cg/company-logo_200_200/0/1519856215226?e=2147483647&v=beta&t=kJv1gX0_sqLG1g7LKLD5uh_6uEFpWGUTuzpuvVJVdEw",
-        "about_us": "A problem isn't truly solved until it's solved for all. Googlers build products that help create opportunities for everyone, whether down the street or across the globe. Bring your insight, imagination and a healthy disregard for the impossible. Bring everything that makes you unique. Together, we can build for everyone.\n\nCheck out our career opportunities at goo.gle/3DLEokh",
-        "num_of_employees": 288809,
-        "website": "https://goo.gle/3DLEokh",
-        "industry": "Software Development",
-        "company_size_approx": "10,001+",
-        "headquarters": "Mountain View, CA",
-        "type": "Public Company",
-        "specialties": "search, ads, mobile, android, online video, apps, machine learning, virtual reality, cloud, hardware, artificial intelligence, youtube, and software",
-        "funding": "$130.44",
-        "funding_total_rounds": 3,
-        "funding_option": "Series A",
-        "last_funding_round": "Jul 7, 1999"
+        "company_name": "OpenAI",
+        "linkedin_followers_count": 2610704,
+        "company_logo_url": "https://media.licdn.com/dms/image/C4E0BAQG0lRhNgYJCXw/company-logo_200_200/0/1678382029586?e=2147483647&v=beta&t=ixFAwvTgLyU99x2ihJEGBuy0T-Mp6lenxo_fDUJP3vY",
+        "about_us": "OpenAI is an AI research and deployment company dedicated to ensuring that general-purpose artificial intelligence benefits all of humanity. AI is an extremely powerful tool that must be created with safety and human needs at its core. OpenAI is dedicated to putting that alignment of interests first — ahead of profit.\n\nTo achieve our mission, we must encompass and value the many different perspectives, voices, and experiences that form the full spectrum of humanity. Our investment in diversity, equity, and inclusion is ongoing, executed through a wide range of initiatives, and championed and supported by leadership.\n\nAt OpenAI, we believe artificial intelligence has the potential to help people solve immense global challenges, and we want the upside of AI to be widely shared. Join us in shaping the future of technology.",
+        "num_of_employees": 1230,
+        "website": "https://openai.com/",
+        "industry": "Research Services",
+        "company_size_approx": "201-500",
+        "headquarters": "San Francisco, CA",
+        "type": "Partnership",
+        "founded": "2015",
+        "specialties": "artificial intelligence and machine learning",
+        "funding": "not-found",
+        "funding_total_rounds": 10,
+        "funding_option": "Secondary market",
+        "last_funding_round": "Sep 14, 2023"
     }
 ]
 
