@@ -1,4 +1,4 @@
-#!/Users/karthik/scrapy-linkedin-companies-directory/venv/bin/python3.11
+#!/Users/karthik/Desktop/Linkedin-Company-Data-Scraping-System/venv/bin/python3.11
 # -*- coding: utf-8 -*-
 import re
 import sys

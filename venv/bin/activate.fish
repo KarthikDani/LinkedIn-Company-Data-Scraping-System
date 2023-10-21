@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/Users/karthik/scrapy-linkedin-companies-directory/venv"
+set -gx VIRTUAL_ENV "/Users/karthik/Desktop/Linkedin-Company-Data-Scraping-System/venv"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

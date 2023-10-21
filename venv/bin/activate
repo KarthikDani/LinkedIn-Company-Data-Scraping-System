@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/karthik/scrapy-linkedin-companies-directory/venv"
+VIRTUAL_ENV="/Users/karthik/Desktop/Linkedin-Company-Data-Scraping-System/venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
