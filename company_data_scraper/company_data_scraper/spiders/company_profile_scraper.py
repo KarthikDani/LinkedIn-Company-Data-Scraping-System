@@ -5,15 +5,23 @@ from scrapy.http import Request, Response
 import re
 
 input_file = 'directorydata.json'
-target_company_info = "OpenAI"
+#target_company_info = "OpenAI"
+
+desired_company_names = ["Microsoft", "OpenAI"] # Please make sure to check the spellings of the names given
+company_urls = []
+
 
 def get_url_by_company_name(company_name):
     try:
         with open(input_file, 'r') as json_file:
             data = json.load(json_file)
-            for company_data in data:
-                if company_name in company_data:
-                    return company_data[company_name]
+            for name in desired_company_names:
+                for company_data in data:
+                    if name in company_data:
+                        url = str(company_data[name])
+                        company_urls.append(url)
+                        return url
+                        
     except FileNotFoundError:
         print(f"Error: JSON file '{input_file}' not found.")
     except Exception as e:
@@ -24,18 +32,10 @@ def get_url_by_company_name(company_name):
 class CompanyProfileScraperSpider(scrapy.Spider):
     name = 'company_profile_scraper'
 
-    company_pages = [
-        str(get_url_by_company_name(target_company_info))
-        # 'https://in.linkedin.com/company/adani-electricity?trk=companies_directory'
-        # 'https://www.linkedin.com/company/amazon?trk=companies_directory',
-        # 'https://www.linkedin.com/company/google?trk=companies_directory',
-        # 'https://www.linkedin.com/company/linkedin?trk=companies_directory'
-    ]
+    company_pages = company_urls.copy()
 
     def start_requests(self):
         company_index_tracker = 0
-
-        # self.readUrlsFromJobsFile()
 
         first_url = self.company_pages[company_index_tracker]
         yield scrapy.Request(url=first_url, callback=self.parse_response,
