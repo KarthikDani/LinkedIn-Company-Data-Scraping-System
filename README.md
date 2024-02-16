@@ -56,7 +56,7 @@ The scraped company directory data will be stored in the `directory_data.json` f
 
 ### LinkedIn Company Profile Scraper
 
-To Populate the list of companies you want to get information about, it's important to understand the `directorydata.json` contains the list of companies with their `url`s. So the `company_profile_scraper.py` is supposed to take list of company names, through which it grabs the respective linkedin urls from the `directorydata.json` that scrapes the specific urls.
+To Populate the list of companies you want to get information about, it's important to understand that the `company_profile_scraper.py` is supposed to take list of company names, through which it grabs the respective linkedin urls from the `directorydata.json` that scrapes the specific urls.
 
 Go to `company_profile_scraper.py` and add your list of companies in the given `desired_company_names` list. You can add as many as you like!
 
