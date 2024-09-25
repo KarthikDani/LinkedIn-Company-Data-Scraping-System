@@ -32,7 +32,7 @@ git clone https://github.com/KarthikDani/LinkedIn-Company-Data-Scraping-System.g
 # 2. Go into each of the folder
 cd LinkedIn-Company-Data-Scraping-System
 
-# 3. (Optional) To create a virtual environment [exists in this case already]
+# 3. (Recommended) Create a virtual environment
 python3 -m venv venv
 
 # 4. Activate the virutal environment
@@ -46,8 +46,11 @@ pip install scrapy requests
 
 ### LinkedIn Company Directory Scraper
 
-Run the LinkedIn Company Directory Scraper using the following command:
-
+1. To run the LinkedIn Company Directory Scraper, first navigate to the `company_data_scraper` directory:
+```bash
+cd company_data_scraper
+```
+2. Then run the script to store all the possible company names and their linkedin page URLs:
 ```bash
 scrapy crawl linkedin_directory_scraper -O directory_data.json
 ```
@@ -118,7 +121,6 @@ Below is an example of the output format of the company profile scraper with 16 
 ]
 
 ```
-
 
 ## 6. Contributing
 
