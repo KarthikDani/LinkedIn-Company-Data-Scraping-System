@@ -5,13 +5,10 @@ from scrapy.http import Request, Response
 import re
 
 input_file = 'directorydata.json'
-#target_company_info = "OpenAI"
-
-desired_company_names = ["Microsoft", "OpenAI"] # Please make sure to check the spellings of the names given
+desired_company_names = ["OpenAI", "Microsoft"] # Please make sure to check the spellings of the names given
 company_urls = []
 
-
-def get_url_by_company_name(company_name):
+def get_url_by_company_name():
     try:
         with open(input_file, 'r') as json_file:
             data = json.load(json_file)
@@ -20,19 +17,26 @@ def get_url_by_company_name(company_name):
                     if name in company_data:
                         url = str(company_data[name])
                         company_urls.append(url)
-                        return url
-                        
+            
+            print("Company URLs:", set(company_urls))
     except FileNotFoundError:
         print(f"Error: JSON file '{input_file}' not found.")
     except Exception as e:
         print(f"An error occurred while reading JSON file: {str(e)}")
-    return None
 
 
 class CompanyProfileScraperSpider(scrapy.Spider):
     name = 'company_profile_scraper'
+    
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        get_url_by_company_name()
 
-    company_pages = company_urls.copy()
+        if not company_urls:
+            print("No company URLs found. Exiting spider.")
+            raise ValueError("No URLs to scrape.")
+
+        self.company_pages = list(set(company_urls.copy()))
 
     def start_requests(self):
         company_index_tracker = 0
