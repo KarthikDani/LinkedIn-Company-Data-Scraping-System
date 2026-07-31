@@ -23,7 +23,7 @@ This project is supported by **CoreClaw**. *(paid sponsorship)*
   </picture>
 </a>
 
-Web scraping platform with ready-made Workers and managed infrastructure for data extraction & automation. — [coreclaw.com](https://coreclaw.com)
+Web scraping platform with ready-made Workers and managed infrastructure for data extraction & automation. — [coreclaw.com]([https://coreclaw.com](https://www.coreclaw.com/?utm_source=github&utm_medium=cpc&utm_campaign=ka&utm_term=&utm_id=ka))
 
 ---
 
