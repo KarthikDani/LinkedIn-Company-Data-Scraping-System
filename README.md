@@ -3,6 +3,30 @@
 The LinkedIn Company Data Scraping System combines two powerful spiders for extracting valuable data from LinkedIn: `Linkedin Directory Scraper` and `Company Profile Scraper` python files. 
 This system provides a comprehensive solution for gathering company information for various purposes, including research, analytics, building solutions and more.
 
+---
+
+<!--
+  SPONSOR PLACEMENT — CoreClaw
+  Agreed term: 12 months, 2026-08-01 through 2027-08-01.
+  EXPIRES 2027-08-01 — remove this block (and .github/sponsors/coreclaw-*.svg)
+  unless the sponsorship has been renewed in writing.
+-->
+
+### Sponsor
+
+This project is supported by **CoreClaw**. *(paid sponsorship)*
+
+<a href="https://coreclaw.com">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset=".github/sponsors/coreclaw-on-dark.svg">
+    <img alt="CoreClaw" src=".github/sponsors/coreclaw-on-light.svg" height="34">
+  </picture>
+</a>
+
+Web scraping platform with ready-made Workers and managed infrastructure for data extraction & automation. — [coreclaw.com](https://coreclaw.com)
+
+---
+
 ## Table of Contents
 
 1. [Features](#1-features)
